@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="210.0" style="-fx-background-color: #121212;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="haru.spotify.PlaylistInListController">
+   <children>
+      <Label fx:id="nameLabel" onMouseClicked="#onMouseClickRedirect" onMouseEntered="#onMouseEnteredNameLabel" onMouseExited="#onMouseExitedNameLabel" prefHeight="20.0" prefWidth="163.0" style="-fx-text-fill: a1a1a1;" text="sample_playlist">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <HBox.margin>
+            <Insets left="45.0" />
+         </HBox.margin>
+      </Label>
+   </children>
+</HBox>

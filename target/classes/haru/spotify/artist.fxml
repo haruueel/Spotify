@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox fx:id="container" alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#onClickRedirect" onMouseEntered="#onMouseEntered" onMouseExited="#onMouseExited" prefHeight="75.0" prefWidth="275.0" style="-fx-background-color: #1f1f1f; -fx-background-radius: 100;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="haru.spotify.ArtistController">
+   <children>
+      <ImageView fx:id="img" fitHeight="54.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons/artists/arianagrande.png" />
+         </image>
+         <HBox.margin>
+            <Insets left="15.0" />
+         </HBox.margin>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label fx:id="nameLabel" onMouseEntered="#onMouseEnteredNameLabel" onMouseExited="#onMouseExitedNameLabel" prefHeight="23.0" prefWidth="152.0" text="artist_name">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+         <HBox.margin>
+            <Insets left="20.0" />
+         </HBox.margin>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <ImageView fx:id="followIcon" fitHeight="32.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons/alter_followable.png" />
+         </image>
+         <HBox.margin>
+            <Insets />
+         </HBox.margin>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+</HBox>

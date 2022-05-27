@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="830.0" prefWidth="1515.0" styleClass="primary-color" stylesheets="@css/styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="haru.spotify.SpotifyController">
+   <left>
+      <VBox prefHeight="890.0" prefWidth="211.0" scaleZ="100.0" style="-fx-background-color: #121212;" styleClass="secondary-color" stylesheets="@css/styles.css" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="169.0" prefWidth="211.0">
+               <children>
+                  <ImageView fitHeight="96.0" fitWidth="165.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/logo.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="57.0" prefWidth="282.0" stylesheets="@css/styles.css">
+               <children>
+                  <ImageView fitHeight="54.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/home.png" />
+                     </image>
+                  </ImageView>
+                  <Label text="Home">
+                     <font>
+                        <Font name="Arial Bold" size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </HBox>
+            <HBox fx:id="libraryHbox" alignment="CENTER" onMouseClicked="#onLibraryClick" onMouseEntered="#onLibraryEntered" onMouseExited="#onLibraryExited" prefHeight="100.0" prefWidth="211.0">
+               <children>
+                  <ImageView fitHeight="54.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/library.png" />
+                     </image>
+                  </ImageView>
+                  <Label text="Library">
+                     <font>
+                        <Font name="Arial Bold" size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </HBox>
+            <VBox alignment="TOP_CENTER" prefHeight="673.0" prefWidth="211.0">
+               <children>
+                  <Label fx:id="playlistLabel" onMouseClicked="#onCreatePlaylistClick" onMouseEntered="#onMouseEnteredPlaylistLabel" onMouseExited="#onMouseExitedPlaylistLabel" style="-fx-text-fill: a1a1a1;" styleClass="gray-color" stylesheets="@css/styles.css" text="•  Playlists  •">
+                     <font>
+                        <Font name="Arial Bold" size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+                  <ScrollPane fx:id="playlistPane" prefHeight="515.0" prefWidth="211.0" style="-fx-background-color: transparent;">
+                     <content>
+                        <VBox fx:id="playlistContainer" prefHeight="0.0" prefWidth="0.0" />
+                     </content>
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </ScrollPane>
+                  <HBox alignment="CENTER" prefHeight="79.0" prefWidth="211.0" spacing="10.0" style="-fx-background-color: #101010;" stylesheets="@css/styles.css">
+                     <children>
+                        <ImageView fx:id="nowListeningImage" fitHeight="47.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/albums/placeholder.png" />
+                           </image>
+                        </ImageView>
+                        <VBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="55.0" prefWidth="121.0">
+                           <children>
+                              <Label fx:id="nowListeningName" prefHeight="20.0" prefWidth="123.0" style="-fx-text-fill: #1DB954;" styleClass="gray-color" stylesheets="@css/styles.css">
+                                 <font>
+                                    <Font name="Arial Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <HBox alignment="BASELINE_CENTER" prefHeight="19.0" prefWidth="121.0">
+                                 <children>
+                                    <ImageView fitHeight="97.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icons/go-back.png" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets right="20.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                    <ImageView fitHeight="97.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icons/play.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="97.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icons/go-next.png" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets left="20.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                    <ImageView fitHeight="97.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icons/equaliser-animated-green.f93a2ef4.gif" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets left="20.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="15.0" />
+                                 </VBox.margin>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+         <rotationAxis>
+            <Point3D z="5.0" />
+         </rotationAxis>
+      </VBox>
+   </left>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="69.0" prefWidth="1304.0" spacing="20.0">
+               <children>
+                  <ImageView fitHeight="75.0" fitWidth="49.0" onMouseClicked="#onGoBackClick" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/back_arrow.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <TextField fx:id="searchField" onKeyPressed="#onEnterPressed" prefHeight="42.0" prefWidth="303.0" style="-fx-border-color: transparent; -fx-background-radius: 100;" />
+                  <Pane prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                  <Button fx:id="upgradeButton" mnemonicParsing="false" onMouseClicked="#onUpgradeClick" prefHeight="43.0" prefWidth="124.0" styleClass="upgrade-button" stylesheets="@css/styles.css" text="UPGRADE">
+                     <font>
+                        <Font name="Arial Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <HBox alignment="CENTER_LEFT" prefHeight="69.0" prefWidth="260.0" spacing="20.0">
+                     <children>
+                        <ImageView fitHeight="51.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/settings.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <Label fx:id="usernameLabel" text="username">
+                           <font>
+                              <Font name="Arial Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="37.0" fitWidth="43.0" onMouseClicked="#onLogOutClick" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/logout.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <VBox fx:id="mainContainer" alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" spacing="20.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <ImageView fx:id="ad" fitHeight="160.0" fitWidth="625.0" onMouseClicked="#onAdClick" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/ads/1.jpg" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="1214.0">
+                     <children>
+                        <Label text="Trending artists!">
+                           <font>
+                              <Font name="Arial Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="37.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/trending.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="15.0" />
+                           </HBox.margin>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <ScrollPane fx:id="artistPane" prefHeight="86.0" prefWidth="1214.0" style="-fx-background-color: transparent;">
+                     <content>
+                        <HBox fx:id="artistContainer" prefHeight="0.0" prefWidth="0.0" spacing="15.0" />
+                     </content></ScrollPane>
+                  <Label text="Sponsored albums">
+                     <font>
+                        <Font name="Arial Bold" size="24.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <ScrollPane fx:id="favoritePane" prefHeight="297.0" prefWidth="1214.0" style="-fx-background-color: transparent;">
+                     <content>
+                        <HBox fx:id="favoriteContainer" prefHeight="0.0" prefWidth="0.0" spacing="15.0" />
+                     </content></ScrollPane>
+               </children>
+               <VBox.margin>
+                  <Insets left="70.0" />
+               </VBox.margin>
+            </VBox>
+         </children>
+         <BorderPane.margin>
+            <Insets left="20.0" top="20.0" />
+         </BorderPane.margin>
+      </VBox>
+   </center>
+</BorderPane>

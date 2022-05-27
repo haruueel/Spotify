@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="710.0" style="-fx-background-color: #121212; -fx-background-radius: 20;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="haru.spotify.SongInAlbumController">
+   <children>
+      <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="496.0">
+         <children>
+            <ImageView fx:id="followIcon" fitHeight="38.0" fitWidth="28.0" onMouseClicked="#onFollowIconClick" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons/alter_followable.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label fx:id="nameLabel" onMouseClicked="#onPlaySongClick" text="emotional bruises" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="15.0" />
+               </HBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label fx:id="artistLabel" onMouseClicked="#onArtistLabelClickRedirect" onMouseEntered="#onArtistLabelMouseEntered" onMouseExited="#onArtistLabelMouseExited" style="-fx-text-fill: #737373;" text="Madison Beer">
+               <font>
+                  <Font name="Arial Italic" size="14.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <ImageView fitHeight="96.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons/bx-time.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="durationLabel" style="-fx-text-fill: #a1a1a1;" text="00:00">
+               <font>
+                  <Font name="Arial Italic" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Label>
+            <ImageView fitHeight="96.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons/chart.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </ImageView>
+            <Label fx:id="timesListenedLabel" style="-fx-text-fill: #a1a1a1;" text="1000">
+               <font>
+                  <Font name="Arial Italic" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+   </children>
+</HBox>

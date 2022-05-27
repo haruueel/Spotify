@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="container" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#onClickRedirect" onMouseEntered="#onMouseEntered" onMouseExited="#onMouseExited" prefHeight="280.0" prefWidth="220.0" spacing="5.0" style="-fx-background-radius: 10; -fx-background-color: #1f1f1f;" stylesheets="@css/styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="haru.spotify.PlaylistController">
+   <children>
+      <ImageView fitHeight="194.0" fitWidth="199.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons/albums/placeholder.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label fx:id="nameLabel" onMouseEntered="#onMouseEnteredNameLabel" onMouseExited="#onMouseExitedNameLabel" prefHeight="21.0" prefWidth="187.0" text="album_name">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+         <VBox.margin>
+            <Insets left="5.0" top="5.0" />
+         </VBox.margin>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <HBox alignment="CENTER_LEFT" prefHeight="15.0" prefWidth="220.0">
+         <children>
+            <Label prefHeight="17.0" prefWidth="79.0" styleClass="gray-color" text="P L A Y L I S T">
+               <font>
+                  <Font name="Carlito Bold Italic" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </Label>
+            <ImageView fitHeight="17.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons/playlist.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+   </children>
+</VBox>

@@ -1,0 +1,43 @@
+.primary-color{
+    -fx-background: #181818;
+}
+
+.secondary-color{
+    -fx-background: #121212;
+}
+
+.gray-color{
+    -fx-text-fill: #a1a1a1;
+}
+
+.new-playlist-border{
+    -fx-border-color: #a1a1a1;
+    -fx-border-width: 1 0 0 0;
+}
+
+.selected {
+    -fx-border-color: #1ED760;
+    -fx-border-width: 0 0 0 5;
+}
+
+.searchbar {
+    -fx-background-color: fff;
+    -fx-background-radius: 100;
+}
+
+.upgrade-button{
+    -fx-background-color: rgba(0, 0, 0, 0);
+    -fx-border-color: ffffff;
+    -fx-text-fill: ffffff;
+    -fx-border-radius: 100;
+}
+
+.login-button{
+    -fx-background-color: rgba(30,215,96,100);
+    -fx-text-fill: #121212;
+}
+
+.error-button{
+    -fx-background-color: rgba(215, 30, 52,100);
+    -fx-text-fill: #121212;
+}

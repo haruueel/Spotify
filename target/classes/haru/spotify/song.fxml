@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" fx:id="container" onMouseEntered="#onMouseEntered" onMouseExited="#onMouseExited" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="280.0" prefWidth="220.0" spacing="5.0" style="-fx-background-radius: 10; -fx-background-color: #1f1f1f;" stylesheets="@css/styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="haru.spotify.SongController">
+   <children>
+      <ImageView fx:id="img" fitHeight="194.0" fitWidth="199.0" pickOnBounds="true" preserveRatio="true" onMouseClicked="#onAlbumLogoClickRedirect">
+         <image>
+            <Image url="@icons/albums/placeholder.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label fx:id="nameLabel" onMouseClicked="#onPlaySongClick" onMouseEntered="#onMouseEnteredNameLabel" onMouseExited="#onMouseExitedNameLabel" prefHeight="21.0" prefWidth="187.0" text="song_name">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+         <VBox.margin>
+            <Insets left="5.0" top="5.0" />
+         </VBox.margin>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <Label fx:id="artistLabel" onMouseEntered="#onMouseEnteredArtistLabel" onMouseExited="#onMouseExitedArtistLabel" onMouseClicked="#onArtistLabelClickRedirect" prefHeight="16.0" prefWidth="187.0" styleClass="gray-color" text="artist_name">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+         <VBox.margin>
+            <Insets left="5.0" />
+         </VBox.margin>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+   </children>
+</VBox>

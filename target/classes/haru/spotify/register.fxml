@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" spacing="20.0" style="-fx-background-color: #121212;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="haru.spotify.RegisterController">
+   <children>
+      <Label fx:id="usernameLabel" style="-fx-text-fill: #fff;" text="Username">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin>
+      </Label>
+      <TextField fx:id="usernameField" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="26.0" prefWidth="300.0" />
+      <Label fx:id="passwordLabel" style="-fx-text-fill: #fff;" text="Password">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="passwordField" maxWidth="-Infinity" prefWidth="300.0" />
+      <Label fx:id="emailLabel" style="-fx-text-fill: #fff;" text="Email">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="emailField" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="26.0" prefWidth="300.0" />
+      <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="24.0" prefWidth="300.0">
+         <children>
+            <Label fx:id="genderLabel" prefHeight="23.0" prefWidth="207.0" style="-fx-text-fill: #fff;" text="Select Gender">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
+               </font>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+            <ChoiceBox fx:id="genderBox" prefWidth="150.0" style="-fx-background-color: #fff;" />
+         </children>
+      </HBox>
+      <Label fx:id="birthLabel" style="-fx-text-fill: #fff;" text="Birth Date">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="birthField" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="26.0" prefWidth="300.0" promptText="yyyy-mm-dd" style="-fx-alignment: center;" />
+      <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="203.0">
+               <children>
+                  <Label fx:id="countryLabel" style="-fx-text-fill: #fff;" text="Country">
+                     <font>
+                        <Font name="Arial Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="countryField" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="26.0" prefWidth="178.0">
+                     <HBox.margin>
+                        <Insets top="20.0" />
+                     </HBox.margin>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </TextField>
+               </children>
+            </VBox>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label fx:id="zipLabel" style="-fx-text-fill: #fff;" text="ZIP">
+                     <font>
+                        <Font name="Arial Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="zipField" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="26.0" prefWidth="82.0">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin></TextField>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <Button mnemonicParsing="false" onMouseClicked="#onRegisterClick" style="-fx-background-radius: 100;" styleClass="login-button" stylesheets="@css/styles.css" text="Register">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</VBox>
